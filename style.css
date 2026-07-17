@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter, sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFF;
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFF;
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+    --danger-checked: #a92835;
+    --tarefa-input: #f48cc2f6;
+    --editar-input: #10B981;
+    --editar-hover: #059669;
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--background-primary);
+    padding-inline: 3.2rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-block: 2.5rem 4rem;
+}
+
+.adicionar-item {
+    h1 {
+        font-size: 2.4rem;
+        margin-bottom: 4.4rem;
+    }
+
+    input,
+    button {
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 1.2rem 1.8rem;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+    }
+
+    input {
+        border: 2px solid var(--border-primary);
+        margin-bottom: 1.6rem;
+        color: var(--content-primary);
+    }
+
+    input:focus {
+        border-color: var(--color-brand);
+    }
+
+    input::placeholder {
+        color: var(--content-tertiary);
+    }
+
+    button {
+        background: var(--color-brand);
+        color: white;
+        font-weight: 600;
+    }
+
+    button:hover {
+        background: var(--color-brand-hover);
+        transition: background 0.4s;
+    }
+}
+
+.lista {
+    margin-top: 4rem;
+}
+
+.item {
+    background: var(--tarefa-input);
+    border-radius: 20px;
+    padding: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+
+.botao-deletar {
+    background: var(--color-danger);
+    color: var(--always-white);
+    padding: 5px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    margin-left: 0.8rem; 
+}
+
+.botao-deletar:hover {
+    background: var(--danger-checked);
+    transition: background 0.4s;
+    cursor: pointer;
+
+}
+
+.botao-editar {
+     background: var(--editar-input);
+    color: var(--always-white);
+    padding: 5px;
+    margin-left: auto;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+}
+
+.botao-editar:hover {
+    background: var(--editar-hover);
+    transition: background 0.4s;
+    cursor: pointer;
+
+}
+
+
+
+@media(min-width: 630px) {
+    main {
+        max-width: 62.7rem;
+        margin-inline: auto;
+    }
+
+    .adicionar-item div {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1.6rem;
+
+        input {
+            grid-column: 1 / 8;
+            margin: 0;
+        }
+
+        button {
+            grid-column: 8 / 11;
+            cursor: pointer;
+        }
+    }
+}
