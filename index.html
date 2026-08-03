@@ -2,47 +2,42 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickList</title>
-
+    <title>Modelo JS</title>
+    <link rel="shortcut icon" href="image/icons8-clock-48.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./icons8-numbers-48.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./image/icons8-checked-48 (1).png" type="image/x-icon">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-
-    <script src="main.js" defer></script>
 </head>
 
 <body>
-
+    <script src="script.js" defer></script>
     <header>
-        <img src="./image/logo.png" alt="Logo do QuickList">
+        <h1>Analisador de Números</h1>
     </header>
 
-    <main>
+    <section>
+        <div>
+           Número (entre 1 e 100)
+           <input type="number" name="fnum" id="fnum">
+           <input type="button" value="adicionar" id="botao-adicionar">
+           <br> 
+           <select name="flista" id="flista" size="6"></select>
+           <br>
+           <input type="button" value="Finalizar" id="botao-finalizar">
+        </div>
 
-        <section class="adicionar-item">
-            <h1>Compras da semana</h1>
+        <div id="res">
+               
+        </div>
 
-            <div>
-                <input type="text" id="item-input" placeholder="Adicione um novo item">
-                <button id="btn-adicionar">
-                    Adicionar item
-                </button>
-            </div>
-        </section>
 
-        <section class="lista" id="lista-compras">
-           
-        </section>
+    </section>
 
-        
-    </main>
+    <footer>
+        <p>&copy CursoEmVideo</p>
+    </footer>
 
 </body>
 
